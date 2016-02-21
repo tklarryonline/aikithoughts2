@@ -4,7 +4,9 @@
 <div class="posts-list">
   {% for post in posts %}
   <div class="post">
-    <h1 class="post-title">{{ post.title}}</h1>
+    <h1 class="post-title">
+      <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title}}</a>
+    </h1>
     <div class="post-time">{{ post.published_date }}</div>
     <div class="post-content">{{ post.text }}</div>
   </div>
