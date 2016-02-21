@@ -4,5 +4,5 @@ from .models.post import Post
 
 
 class PostListView(ListView):
-    model = Post
+    queryset = Post.objects.order_by('-published_date')
     context_object_name = 'posts'
