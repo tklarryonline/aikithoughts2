@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Settings for Database Connection
+export DB_NAME=FIXME
+export DB_USERNAME=FIXME
+export DB_PASSWORD=FIXME
+export DB_HOST=FIXME
