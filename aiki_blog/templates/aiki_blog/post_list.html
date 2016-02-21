@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Aikithoughts</title>
+  </head>
+  <body>
+    <h1>Aikithoughts</h1>
+
+    {% for post in posts %}
+    <div class="post">
+      <h2>{{ post.title}}</h2>
+      <p>{{ post.text }}</p>
+    </div>
+    {% empty %}
+    No post written yet.
+    {% endfor %}
+  </body>
+</html>
