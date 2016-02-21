@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Our own apps
+    'aiki_blog',
 ]
 
 MIDDLEWARE_CLASSES = [
