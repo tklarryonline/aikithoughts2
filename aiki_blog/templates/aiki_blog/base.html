@@ -1,0 +1,22 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Aikithoughts</title>
+    <link href='//fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Open+Sans:600&subset=latin,vietnamese'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'css/posts.css' %}">
+  </head>
+  <body>
+    <header class="base-container">
+      <h1>Aikithoughts</h1>
+    </header>
+
+    <div class="base-container">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+html {
+  font-size: 20px;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  background: #ffffff;
+  color: #303030;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+strong {
+  font-weight: 400;
+}
+
+.base-container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  position: relative;
+  width: 48rem;
+}
+
+.text-center,
+.post h1.post-title,
+.post .post-time {
+  text-align: center;
+}
+
+a {
+  color: #303030;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+header.base-container {
+  margin-bottom: 3.5rem;
+}
+
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.post h1.post-title {
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+}
+
+.post .post-time {
+  color: #aeaeae;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.75rem;
+}
+
+.post .post-content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 31rem;
+}
+
+.post .post-content p {
+  text-indent: 1.5rem;
+}
+
+.post + hr.circle-divider {
+  margin-left: auto;
+  margin-right: auto;
+  width: 23rem;
+}
+
+hr.circle-divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  color: #333;
+  margin: 2.5rem auto;
+  padding: 0 0.5rem;
+  text-align: center;
+}
+
+hr.circle-divider:after {
+  background: #fff;
+  color: #666;
+  content: '○';
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: 0 0.5rem;
+  position: relative;
+  top: -0.75em;
+}
