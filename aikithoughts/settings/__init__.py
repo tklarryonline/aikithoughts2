@@ -25,8 +25,6 @@ SECRET_KEY = 'ym3=ut@63dyoa7n7r-*)^q4j_*w7ajowt_yw)x8*w96m2(yl!+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -124,6 +122,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Settings for Deployment to Heroku
+# https://devcenter.heroku.com/articles/getting-started-with-python
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+ALLOWED_HOSTS = []
