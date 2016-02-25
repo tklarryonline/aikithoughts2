@@ -3,7 +3,7 @@
 {% block content %}
 <div class="post">
   <h1 class="post-title">{{ post.title}}</h1>
-  <div class="post-time">{{ post.published_date }}</div>
+  <div class="post-time">{{ post.published_date | date:'M j, Y, G:i' }}</div>
   <div class="post-content">{{ post.text }}</div>
 </div>
 {% endblock %}
