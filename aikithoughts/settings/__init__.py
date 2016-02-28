@@ -38,6 +38,9 @@ INSTALLED_APPS = [
 
     # Our own apps
     'aiki_blog',
+
+    # Third party apps
+    'markdownx',
 ]
 
 MIDDLEWARE_CLASSES = [
