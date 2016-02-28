@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load markdownx %}
+
 {% block content %}
 <div class="posts-list">
   {% for post in posts %}
@@ -8,7 +10,7 @@
       <a href="{% url 'aiki:post_detail' pk=post.pk %}">{{ post.title}}</a>
     </h1>
     <div class="post-time">{{ post.published_date }}</div>
-    <div class="post-content">{{ post.text }}</div>
+    <div class="post-content">{{ post.text | markdownxify }}</div>
   </div>
   <hr class="circle-divider">
   {% empty %}
