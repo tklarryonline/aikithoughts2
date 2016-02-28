@@ -1,7 +1,6 @@
 from datetime import datetime
+from unittest.case import TestCase
 from unittest.mock import patch
-
-from django.test.testcases import TestCase
 
 from aiki_blog.factories import PostFactory
 
