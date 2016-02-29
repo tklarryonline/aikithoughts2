@@ -1,0 +1,18 @@
+{% load staticfiles %}
+
+<header class="base-container">
+  <div class="logo no-select">
+    <a class="logo-text" href="{% url 'aiki:index' %}">
+      <strong>Aiki</strong>
+      <span>Thoughts</span>
+    </a>
+  </div>
+
+  <div class="about-links text-center">
+    <a href="javascript:void(0);">Về AikiThoughts</a>
+    <span class="dot">&bull;</span>
+    <a href="mailto:{{ config.SITE_CONTACT }}">
+      <img src="{% static 'img/email-icon.png' %}" alt="Liên lạc"/>
+    </a>
+  </div>
+</header>

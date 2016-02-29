@@ -1,6 +1,14 @@
-{% extends 'base.html' %}
+{% extends '_layout/base.html' %}
 
 {% load markdownx %}
+{% load staticfiles %}
+
+{% block title %}Home | {{ block.super }}{% endblock %}
+
+{% block css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'css/posts.css' %}">
+{% endblock %}
 
 {% block content %}
 <div class="posts-list">

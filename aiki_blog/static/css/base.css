@@ -1,0 +1,99 @@
+html {
+  font-size: 20px;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  background: #ffffff;
+  color: #303030;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+strong {
+  font-weight: 400;
+}
+
+a {
+  color: #303030;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.base-container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  position: relative;
+  width: 48rem;
+}
+
+header.base-container {
+  margin-bottom: 3.5rem;
+}
+
+header.base-container .logo {
+  background: url('/static/img/zen-circle.png') center 0 no-repeat;
+  height: 292px;
+  margin: 0 auto 3rem;
+  position: relative;
+  text-align: center;
+  width: 578px;
+}
+
+header.base-container .logo a.logo-text {
+  bottom: 35px;
+  color: #fff;
+  display: block;
+  position: absolute;
+  text-decoration: none;
+  width: 100%;
+}
+
+header.base-container .logo a.logo-text:visited,
+header.base-container .logo a.logo-text:active {
+  color: #fff;
+}
+
+header.base-container .logo a.logo-text span,
+header.base-container .logo a.logo-text strong {
+  display: block;
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+header.base-container .about-links {
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+header.base-container .about-links a {
+  font-weight: 400;
+}
+
+header.base-container .about-links a > img {
+  vertical-align: bottom;
+}
+
+header.base-container .about-links span.dot {
+  color: #aeaeae;
+  font-size: 1rem;
+  margin: 0 2px;
+}
+
