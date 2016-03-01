@@ -5,15 +5,16 @@ python:
 services: postgresql
 
 env:
-  - DB_NAME=travisci
-  - DB_USERNAME=postgres
-  - DB_PASSWORD=""
-  - DB_HOST=localhost
+  global:
+    - DB_NAME=travisci
+    - DB_USERNAME=postgres
+    - DB_PASSWORD=""
+    - DB_HOST=localhost
 
 install: pip install -r requirements.txt
 
 before_script:
-  - psql -c "CREATE DATABASE mydb;" -U postgres
+  - psql -c "CREATE DATABASE travisci;" -U postgres
 
 script:
   - python manage.py migrate
