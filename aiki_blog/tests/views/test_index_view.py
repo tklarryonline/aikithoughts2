@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from datetime import timedelta
 
 from django.core.urlresolvers import reverse
@@ -77,3 +78,11 @@ class IndexViewTestCase(TestCase):
                 '{post}'.format(post=repr(post_1))
             ]
         )
+
+    def test_see_header(self):
+        """
+        Should see header
+        """
+
+        response = self.client.get(reverse('aiki:index'))
+        self.assertContains(response, text=u'Về AikiThoughts', status_code=200)
