@@ -1,0 +1,7 @@
+[run]
+source = aiki_blog
+omit =
+    */migrations/*
+    */tests/*
+    */factories.py
+
