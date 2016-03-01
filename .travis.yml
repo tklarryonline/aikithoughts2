@@ -1,7 +1,20 @@
 language: python
 python:
-  - "3.5"
+  - 3.5
+
+services: postgresql
+
+env:
+  - DB_NAME=travisci
+  - DB_USERNAME=postgres
+  - DB_PASSWORD=""
+  - DB_HOST=localhost
 
 install: pip install -r requirements.txt
 
-script: python manage.py test
+before_script:
+  - psql -c "CREATE DATABASE mydb;" -U postgres
+
+script:
+  - python manage.py migrate
+  - python manage.py test
