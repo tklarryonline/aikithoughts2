@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load sass_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,8 +8,8 @@
     <link href='//fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Open+Sans:600&subset=latin,vietnamese'
           rel='stylesheet' type='text/css'>
     {% block css %}
-      <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
-      <link rel="stylesheet" href="{% static 'css/base.css' %}">
+      <link rel="stylesheet" href="{% sass_src 'css/normalize.css' %}">
+      <link rel="stylesheet" href="{% sass_src 'css/base.scss' %}">
     {% endblock %}
   </head>
   <body>
