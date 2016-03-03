@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export SECRET_KEY=FIXME
+
 # Settings for Database Connection
 export DB_NAME=FIXME
 export DB_USERNAME=FIXME
