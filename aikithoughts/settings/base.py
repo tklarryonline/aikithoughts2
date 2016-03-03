@@ -38,6 +38,7 @@ DJANGO_APPS = (
 
 THIRD_PARTY_APPS = (
     'markdownx',
+    'sass_processor',
 )
 
 AIKITHOUGHTS_APPS = (
@@ -45,6 +46,7 @@ AIKITHOUGHTS_APPS = (
 )
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + AIKITHOUGHTS_APPS
+
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
@@ -130,9 +132,22 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder',
+)
 
 # Settings for Deployment to Heroku
 # https://devcenter.heroku.com/articles/getting-started-with-python
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 ALLOWED_HOSTS = []
+
+
+# Django Sass Processor
+# https://github.com/jrief/django-sass-processor
+
+# Sets floating point precision for output css
+# bootstrap-sass prefers 8 for SASS_PRECISION
+SASS_PRECISION = 8
