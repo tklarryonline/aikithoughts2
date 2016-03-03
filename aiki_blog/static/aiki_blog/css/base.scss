@@ -1,0 +1,110 @@
+html {
+  font-size: 20px;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  background: #ffffff;
+  color: #303030;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+strong {
+  font-weight: 400;
+}
+
+a {
+  color: #303030;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+//colors
+$white: #fff;
+$color_silver_chalice_approx: #aeaeae;
+
+//urls
+$zen_circle_img: url('/static/aiki_blog/img/zen-circle.png');
+
+%common_block {
+  display: block;
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.base-container {
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  position: relative;
+  width: 48rem;
+}
+
+header.base-container {
+  margin-bottom: 3.5rem;
+
+  .logo {
+    background: $zen_circle_img center 0 no-repeat;
+    height: 292px;
+    margin: 0 auto 3rem;
+    position: relative;
+    text-align: center;
+    width: 578px;
+
+    a.logo-text {
+      bottom: 35px;
+      color: $white;
+      display: block;
+      position: absolute;
+      text-decoration: none;
+      width: 100%;
+
+      &:visited,
+      &:active {
+        color: $white;
+      }
+
+      span,
+      strong {
+        @extend %common_block;
+      }
+    }
+  }
+
+  .about-links {
+    font-size: 0.8rem;
+    line-height: 1;
+
+    a {
+      font-weight: 400;
+
+      > img {
+        vertical-align: bottom;
+      }
+    }
+
+    span.dot {
+      color: $color_silver_chalice_approx;
+      font-size: 1rem;
+      margin: 0 2px;
+    }
+  }
+}

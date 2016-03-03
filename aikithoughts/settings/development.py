@@ -10,3 +10,10 @@ ALLOWED_HOSTS = []
 
 # Sets coding style of compiled result
 SASS_OUTPUT_STYLE = 'nested'
+
+
+# Configures Whitenoise to serve Sass
+# http://whitenoise.evans.io/en/latest/django.html
+
+WHITENOISE_USE_FINDERS = True
+WHITENOISE_AUTOREFRESH = True

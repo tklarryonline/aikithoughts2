@@ -1,0 +1,65 @@
+//colors
+$color_silver_chalice_approx: #aeaeae;
+$color_alto_approx: #ddd;
+$color_mine_shaft_approx: #333;
+$white: #fff;
+$color_storm_dust_approx: #666;
+
+//fonts
+$font_0: 'Open Sans';
+$font_1: 'sans-serif';
+
+.text-center {
+  text-align: center;
+}
+
+.post {
+  .post-time {
+    text-align: center;
+    color: $color_silver_chalice_approx;
+    font-family: $font_0, $font_1;
+    font-size: 0.75rem;
+  }
+
+  .post-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 31rem;
+
+    p {
+      text-indent: 1.5rem;
+    }
+  }
+
+  h1.post-title {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0 0 1rem;
+  }
+
+  + hr.circle-divider {
+    margin-left: auto;
+    margin-right: auto;
+    width: 23rem;
+  }
+}
+
+hr.circle-divider {
+  border: none;
+  border-top: 1px solid $color_alto_approx;
+  color: $color_mine_shaft_approx;
+  margin: 2.5rem auto;
+  padding: 0 0.5rem;
+  text-align: center;
+
+  &:after {
+    background: $white;
+    color: $color_storm_dust_approx;
+    content: '○';
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+    position: relative;
+    top: -0.75em;
+  }
+}
