@@ -3,4 +3,4 @@ set -eo pipefail
 
 # The post_compile hook is run by heroku-buildpack-python
 
-echo "-----> I'm post_compile hook"
+echo "-----> I'm pre_compile hook"
