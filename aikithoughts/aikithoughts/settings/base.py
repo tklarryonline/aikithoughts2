@@ -12,6 +12,19 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 
+from django.core.exceptions import ImproperlyConfigured
+
+
+def get_env_variable(var_name):
+    """
+    Get environment variable or raise a friendly exception.
+    """
+    try:
+        return os.environ[var_name]
+    except KeyError:
+        raise ImproperlyConfigured('Please set {var} environment variable!'.format(var=var_name))
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -20,7 +33,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', 'ym3=ut@63dyoa7n7r-*)^q4j_*w7ajowt_yw)x8*w96m2(yl!+')
+SECRET_KEY = get_env_variable(var_name='SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -88,10 +101,10 @@ WSGI_APPLICATION = 'aikithoughts.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ['DB_NAME'],
-        'USER': os.environ['DB_USERNAME'],
-        'PASSWORD': os.environ['DB_PASSWORD'],
-        'HOST': os.environ['DB_HOST'],
+        'NAME': get_env_variable('DB_NAME'),
+        'USER': get_env_variable('DB_USERNAME'),
+        'PASSWORD': get_env_variable('DB_PASSWORD'),
+        'HOST': get_env_variable('DB_HOST'),
         'PORT': 5432,
     }
 }

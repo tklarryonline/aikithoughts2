@@ -1,1 +1,1 @@
-web: gunicorn aikithoughts.wsgi
+web: gunicorn --pythonpath aikithoughts aikithoughts.wsgi
