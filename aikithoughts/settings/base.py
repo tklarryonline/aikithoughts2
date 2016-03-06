@@ -25,6 +25,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'ym3=ut@63dyoa7n7r-*)^q4j_*w7ajowt_yw)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+ALLOWED_HOSTS = []
+
 
 # Application definition
 DJANGO_APPS = (
@@ -138,12 +140,6 @@ STATICFILES_FINDERS = (
 
     'sass_processor.finders.CssFinder',
 )
-
-# Settings for Deployment to Heroku
-# https://devcenter.heroku.com/articles/getting-started-with-python
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-ALLOWED_HOSTS = []
 
 
 # Django Sass Processor
