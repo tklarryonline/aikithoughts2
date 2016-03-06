@@ -1,5 +1,5 @@
 [run]
-source = aiki_blog
+source = aikithoughts
 omit =
     */migrations/*
     */tests/*
