@@ -40,7 +40,7 @@ $white: #fff;
 $color_silver_chalice_approx: #aeaeae;
 
 //urls
-$zen_circle_img: url('/static/aiki_blog/img/zen-circle.png');
+$zen_circle_img: static('aiki_blog/img/zen-circle.png');
 
 %common_block {
   display: block;
@@ -62,7 +62,7 @@ header.base-container {
   margin-bottom: 3.5rem;
 
   .logo {
-    background: $zen_circle_img center 0 no-repeat;
+    background: url($zen_circle_img) center 0 no-repeat;
     height: 292px;
     margin: 0 auto 3rem;
     position: relative;

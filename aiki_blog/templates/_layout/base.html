@@ -1,4 +1,5 @@
-{% load sass_tags %}
+{% load compress %}
+{% load staticfiles %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,8 +11,10 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:600&subset=latin,vietnamese' rel='stylesheet'
           type='text/css'>
     {% block css %}
-      <link rel="stylesheet" href="{% sass_src 'aiki_blog/css/normalize.css' %}">
-      <link rel="stylesheet" href="{% sass_src 'aiki_blog/css/base.scss' %}">
+      {% compress css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'aiki_blog/css/normalize.css' %}">
+        <link rel="stylesheet" type="text/x-scss" href="{% static 'aiki_blog/css/base.scss' %}">
+      {% endcompress %}
     {% endblock %}
   </head>
   <body>

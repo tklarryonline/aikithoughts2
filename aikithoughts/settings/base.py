@@ -39,6 +39,7 @@ DJANGO_APPS = (
 )
 
 THIRD_PARTY_APPS = (
+    'compressor',
     'markdownx',
 )
 
@@ -136,4 +137,17 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+
+    'compressor.finders.CompressorFinder',
 )
+
+
+# Django-libsass & Django-Compressor
+# https://github.com/torchbox/django-libsass
+# https://django-compressor.readthedocs.org/en/latest/quickstart/
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+)
+
+LIBSASS_OUTPUT_STYLE = 'nested'
