@@ -40,7 +40,6 @@ DJANGO_APPS = (
 
 THIRD_PARTY_APPS = (
     'markdownx',
-    'sass_processor',
 )
 
 AIKITHOUGHTS_APPS = (
@@ -137,14 +136,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-
-    'sass_processor.finders.CssFinder',
 )
-
-
-# Django Sass Processor
-# https://github.com/jrief/django-sass-processor
-
-# Sets floating point precision for output css
-# bootstrap-sass prefers 8 for SASS_PRECISION
-SASS_PRECISION = 8
