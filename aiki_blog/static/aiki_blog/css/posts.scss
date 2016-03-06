@@ -9,6 +9,11 @@ $color_storm_dust_approx: #666;
 $font_0: 'Open Sans';
 $font_1: 'sans-serif';
 
+%margin-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .text-center {
   text-align: center;
 }
@@ -22,8 +27,7 @@ $font_1: 'sans-serif';
   }
 
   .post-content {
-    margin-left: auto;
-    margin-right: auto;
+    @extend %margin-center;
     width: 31rem;
 
     p {
@@ -38,8 +42,7 @@ $font_1: 'sans-serif';
   }
 
   + hr.circle-divider {
-    margin-left: auto;
-    margin-right: auto;
+    @extend %margin-center;
     width: 23rem;
   }
 }
