@@ -6,6 +6,7 @@ services: postgresql
 
 env:
   global:
+    - SECRET_KEY=testsecretkeyblablabla
     - DB_NAME=travisci
     - DB_USERNAME=postgres
     - DB_PASSWORD=""
