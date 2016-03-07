@@ -3,9 +3,16 @@ from unittest.case import TestCase
 from unittest.mock import patch
 
 from aiki_blog.factories import PostFactory
+from aiki_blog.models.post import Post
+from behavioralist.tests.test_excerptable import ExcerptableTests
 
 
-class PostTestCase(TestCase):
+class PostTestCase(ExcerptableTests, TestCase):
+    model = Post
+
+    def create_instance(self, **kwargs):
+        return PostFactory(**kwargs)
+
     def test_string_representative(self):
         post = PostFactory()
         self.assertEqual(str(post), post.title)

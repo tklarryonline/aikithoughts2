@@ -1,8 +1,10 @@
 from django.db import models
 from django.utils import timezone
 
+from behavioralist.behaviors.excerptable import Excerptable
 
-class Post(models.Model):
+
+class Post(Excerptable, models.Model):
     author = models.ForeignKey(to='auth.User')
     title = models.CharField(max_length=200)
     text = models.TextField()

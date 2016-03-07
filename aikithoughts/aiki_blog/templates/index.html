@@ -9,7 +9,7 @@
 {% block css %}
   {{ block.super }}
   {% compress css %}
-    <link rel="stylesheet" type="text/x-scss", href="{% static 'aiki_blog/css/posts.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'aiki_blog/css/posts.scss' %}">
   {% endcompress %}
 {% endblock %}
 
@@ -21,7 +21,7 @@
       <a href="{% url 'aiki:post_detail' pk=post.pk %}">{{ post.title}}</a>
     </h1>
     <div class="post-time">{{ post.published_date | date:'M j, Y, G:i' }}</div>
-    <div class="post-content">{{ post.text | markdownxify }}</div>
+    <div class="post-content">{{ post.excerpt | markdownxify }}</div>
   </div>
   <hr class="circle-divider">
   {% empty %}
