@@ -14,5 +14,4 @@ psycopg2==2.6.1
 rcssmin==1.0.6
 rjsmin==1.0.12
 six==1.10.0
-wheel==0.26.0
 whitenoise==2.0.6
