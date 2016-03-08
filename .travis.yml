@@ -25,5 +25,4 @@ script:
   - coverage run manage.py test
 
 after_success:
-  - cd ..
-  - coveralls
+  - coveralls --rcfile=../.coveragerc
