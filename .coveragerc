@@ -1,7 +1,11 @@
 [run]
-source = aikithoughts
+include =
+    aikithoughts/*
+    aiki_blog/*
+    behavioralist/*
+
 omit =
-    */migrations/*
-    */tests/*
-    */factories.py
+    *migrations*
+    *tests*
+    *factories.py
 
