@@ -22,6 +22,9 @@ before_script:
   - psql -c "CREATE DATABASE $DB_NAME;" -U $DB_USERNAME
   - cd aikithoughts
   - python manage.py migrate
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 # give xvfb some time to start
 
 script:
   - coverage run manage.py test
