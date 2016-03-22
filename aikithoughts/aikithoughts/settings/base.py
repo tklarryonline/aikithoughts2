@@ -52,6 +52,7 @@ DJANGO_APPS = (
 )
 
 THIRD_PARTY_APPS = (
+    'behave_django',
     'compressor',
     'markdownx',
 )
