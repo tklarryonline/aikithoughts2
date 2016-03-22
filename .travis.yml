@@ -19,12 +19,13 @@ install:
   - pip install coveralls
 
 before_script:
-  - psql -c "CREATE DATABASE travisci;" -U postgres
+  - psql -c "CREATE DATABASE $DB_NAME;" -U $DB_USERNAME
   - cd aikithoughts
   - python manage.py migrate
 
 script:
   - coverage run manage.py test
+  - coverage run manage.py behave
 
 after_success:
-  - coveralls --rcfile=../.coveragerc
+  - coveralls
