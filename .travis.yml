@@ -32,3 +32,6 @@ script:
 
 after_success:
   - coveralls
+
+notifications:
+  slack: tklarryonline:9i85rjQ8F8fGVKKYFSqMKag5
